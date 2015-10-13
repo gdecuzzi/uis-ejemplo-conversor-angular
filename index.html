@@ -7,13 +7,13 @@
   <body class="container">
     <h1>Conversor de millas a kilometros</h1>
     <div class="panel panel-default">
-      <form class="conversion">
+      <div class="conversion">
         <div class="form-group">
           <label class="lead">Ingrese Millas:</label>
-          <input type="text" class="form-control" placeholder="millas a convertir" />
+          <input type="text" class="form-control" placeholder="millas a convertir" id="millas"/>
         </div>
-        <button type="submit" class="btn btn-primary btn-block">Convertir</button>
-      </form>
+        <button type="submit" class="btn btn-primary btn-block" onClick="document.getElementById('resultado').textContent = document.getElementById('millas').value * 1.609">Convertir</button>
+      </div>
     
       <h4 class="text-center">Son <span id="resultado">0</span> kms</h4>
     </div>
