@@ -1,13 +1,22 @@
 <!doctype html>
 <html>
-  <body>
-    <div>
-      <h1>Conversor de millas a kilometros</h1>
-      <label>Ingrese Millas:</label>
-      <input type="text" placeholder="millas a convertir">
-      <button>Convertir</button>
-      <hr>
-      <h3>Son: <span id="resultado">debe ingresar un valor</span> kms</h3>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body class="container">
+    <h1>Conversor de millas a kilometros</h1>
+    <div class="panel panel-default">
+      <form class="conversion">
+        <div class="form-group">
+          <label class="lead">Ingrese Millas:</label>
+          <input type="text" class="form-control" placeholder="millas a convertir" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Convertir</button>
+      </form>
+    
+      <h4 class="text-center">Son <span id="resultado">0</span> kms</h4>
     </div>
+    
   </body>
 </html>
