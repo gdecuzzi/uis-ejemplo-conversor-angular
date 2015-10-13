@@ -1,22 +1,23 @@
 <!doctype html>
-<html>
+<html ng-app="conversorApp">
   <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="js/conversorController.js"></script>
   </head>
   <body class="container">
     <h1>Conversor de millas a kilometros</h1>
-    <div class="panel panel-default">
+    <div class="panel panel-default" ng-controller="ConversorCtrl as conversor">
       <div class="conversion">
         <div class="form-group">
           <label class="lead">Ingrese Millas:</label>
-          <input type="text" class="form-control" placeholder="millas a convertir" id="millas"/>
+          <input type="text" class="form-control" placeholder="millas a convertir" ng-model="conversor.millas"/>
         </div>
-        <button type="submit" class="btn btn-primary btn-block" onClick="document.getElementById('resultado').textContent = document.getElementById('millas').value * 1.609">Convertir</button>
+        <button type="submit" class="btn btn-primary btn-block" ng-click="convertir()">Convertir</button>
       </div>
-    
-      <h4 class="text-center">Son <span id="resultado">0</span> kms</h4>
+      <h4 class="text-center">Son <span id="resultado">{{conversor.kilometros}}</span> kms</h4>
     </div>
-    
   </body>
 </html>
